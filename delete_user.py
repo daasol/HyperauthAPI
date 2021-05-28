@@ -70,7 +70,6 @@ def delete_user(user_data:list) :
             print(e)
 
 
-
 if __name__ == "__main__":
     users = read_user_list()   #파일로부터 user_id를 하나씩 가져와서 list 생성 
     token = "" 
