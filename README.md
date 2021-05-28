@@ -2,7 +2,7 @@
 Hyperauth API (user delete)
 
 
-Hperauth user delete 가이드 
+# Hperauth user delete 가이드 
 
 Hyperauth의 API를 사용하여 사용자를 삭제하려면 삭제하려는 사용자의 token이 있어야한다. 
 이 token을 얻는 방법에는 두가지 방법이 있다. 
@@ -10,7 +10,7 @@ Hyperauth의 API를 사용하여 사용자를 삭제하려면 삭제하려는 �
   2. User 자신의 권한으로 token을 얻어와 삭제
 
 
-#3 삭제 하기 전 알아야 할 용어 세가지
+### 삭제 하기 전 알아야 할 용어 세가지
 
 1. Realm : authentication resource의 그룹
    ex)tmax 또는 master 
@@ -18,9 +18,9 @@ Hyperauth의 API를 사용하여 사용자를 삭제하려면 삭제하려는 �
    ex) wapl-jmeter, wapl-spec, demo 등등…
 3. token : 사용자 정보를 update하거나 delete 할 때 세션 만료 전까지 갖는 값
 
-#1 User delete
+## User delete
 
-첫번째 방법 (Admin, view-users 권한)
+### 첫번째 방법 (Admin, view-users 권한)
   *주의*
     해당 방법은 auth 설정마다 될 때도 있고 안 될 때도 있어서 두번째 방법을 권장함
 
@@ -31,7 +31,7 @@ Hyperauth의 API를 사용하여 사용자를 삭제하려면 삭제하려는 �
 4. 이후, 유저 delete는 두번째 방법의 delete와 같다.
 
 
-두번째 방법 (사용자 자신의 권한으로 token얻어오기)
+### 두번째 방법 (사용자 자신의 권한으로 token얻어오기)
    *주의*
     사용자가 자신의 권한으로 token을 얻어와서 delete, update하기 때문에 password를 알고 있어야함
     유저가 속한 클라이언트의 realm이 무엇인지 알아야함
