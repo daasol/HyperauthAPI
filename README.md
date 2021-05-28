@@ -40,11 +40,8 @@ Hyperauth의 API를 사용하여 사용자를 삭제하려면 삭제하려는 �
 1. auth에 유저가 등록된 client_id로 username과 password를 Body에 넣어 POST
 2. POST결과로 얻을 수 있는 access_token을 user_name과함께 DELETE
 
-                  --예시--
-realm, client info
-  realms : tmax, client_id : hyperspace
-client info
-  user_name : abcdefg2@tmax.co.kr, password : qwer1234!
+        --realm, client info => realms : tmax, client_id : hyperspace
+        --user info => user_name : abcdefg2@tmax.co.kr, password : qwer1234!
 
 
 POST : https://{auth_ip:port}/auth/realms/tmax/protocol/openid-connect/token
