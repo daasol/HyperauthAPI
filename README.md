@@ -40,25 +40,24 @@ Hyperauth의 API를 사용하여 사용자를 삭제하려면 삭제하려는 �
 1. auth에 유저가 등록된 client_id로 username과 password를 Body에 넣어 POST
 2. POST결과로 얻을 수 있는 access_token을 user_name과함께 DELETE
 
-        --realm, client info => realms : tmax, client_id : hyperspace
-        --user info => user_name : abcdefg2@tmax.co.kr, password : qwer1234!
+        realm, client info => realms : tmax, client_id : hyperspace
+        user info => user_name : abcdefg2@tmax.co.kr, password : qwer1234!
 
 
-POST : https://{auth_ip:port}/auth/realms/tmax/protocol/openid-connect/token
-      Headers => Content-Type : application/x-www-form-urlencoded
-      Body 
-      grant_type :  password	
-      username : abcdefg2@tmax.co.kr
-      password : qwer1234!
-      client_id  : wapl-jmter (삭제할 유저가 속한 client name)
+        POST : https://{auth_ip:port}/auth/realms/tmax/protocol/openid-connect/token
+            Headers => Content-Type : application/x-www-form-urlencoded
+            Body 
+            grant_type :  password	
+            username : abcdefg2@tmax.co.kr
+            password : qwer1234!
+            client_id  : wapl-jmter (삭제할 유저가 속한 client name)
       
 access_token을 얻을 수 있음
 
-DELETE https://{auth_ip:port}/auth/realms/tmax/user/{user_name}
-    QueryParam => token : {Access Token}  (해당 토큰은 앞서 POST로 사용자 자신의 권한으로 받아온 token)
-    
-    
-결과 : User [abcdefg2@tmax.co.kr] Delete Success 
+      DELETE https://{auth_ip:port}/auth/realms/tmax/user/{user_name}
+          QueryParam => token : {Access Token}  (해당 토큰은 앞서 POST로 사용자 자신의 권한으로 받아온 token)
+       
+3. 결과 : User [abcdefg2@tmax.co.kr] Delete Success 
 
 
 Realm이 tmax가 아닌 master라면 URL을 다음과 같이 입력한다.
